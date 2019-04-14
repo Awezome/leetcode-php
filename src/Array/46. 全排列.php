@@ -28,8 +28,8 @@ function dfs($nums,$step){
             continue;
         }
 
+        array_push($step,$v);
         $this->list[$v]=1;
-        $step[]=$v;
         $this->dfs($nums,$step);
         $this->list[$v]=0;
         array_pop($step);
